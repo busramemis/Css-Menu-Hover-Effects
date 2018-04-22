@@ -1,0 +1,58 @@
+body{
+	font-family: Lato, sans-serif;
+	background: #FF9B8E;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	
+	li{
+		list-style: none;
+	}
+}
+
+a{
+	color: #262626;
+	font-size: 1.3em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px 10px;
+	transition: .5s;
+	position: relative;
+	margin: 10px;
+	
+	&:before,
+	&:after{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		background: #262626;
+		transition: .5s;
+		opacity: 0;
+	}
+	
+	&:before{
+		top: 0;
+		left: 0;
+	}
+	
+	&:after{
+		bottom: 0;
+		right: 0;
+	}
+	
+	&:hover:before,
+	&:hover:after{
+		opacity: 1;
+		width: 100%;
+		transition: .5s;
+	}
+}
