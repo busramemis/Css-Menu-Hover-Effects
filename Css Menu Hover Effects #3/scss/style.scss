@@ -1,0 +1,45 @@
+html,
+body{
+	font-family: Lato, sans-serif;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	
+	li{
+		list-style: none;
+		padding: 10px 20px;
+	}
+}
+
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color: #262626;
+	position: relative;
+	transition: .5s;
+	
+	&:before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 25px;
+		background: #ff5f5f;
+		transform-style: preserve-3d;
+		transform: scale(0) rotatey(0deg) skew(10deg);
+		transition: 1.5s cubic-bezier(.43,1.91,.35,.74);
+		z-index: -1;
+	}	
+}
+
+li:hover a:before{
+	transform: scale(1.3) rotatey(360deg) skew(10deg);
+}
+
