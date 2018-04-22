@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Lato, sans-serif;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	
+	li{
+		list-style: none;
+		padding: 10px 20px;
+	}
+}
+
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #262626;
+	font-size: 1.3em;
+	position: relative;
+	
+	&:hover{
+		color: #8C8840;
+	}
+	
+	span:first-child:before, 
+	span:first-child:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 7px;
+		height: 7px;
+		background: transparent;
+		border-top: 2px solid #8C8840;
+		transition: .3s;
+		opacity: 0;
+	}
+	
+	span:first-child:before{
+		left: 0;
+		border-left: 2px solid #8C8840;
+		opacity: 0;
+	}
+	
+	span:first-child:after{
+		right: 0;
+		border-right: 2px solid #8C8840;
+		opacity: 0;
+	}
+	
+	span:last-child:before, 
+	span:last-child:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 7px;
+		height: 7px;
+		background: transparent;
+		border-bottom: 2px solid #8C8840;
+		transition: .3s;
+		opacity: 0;
+	}
+	
+	span:last-child:before{
+		left: 0;
+		border-left: 2px solid #8C8840;
+		opacity: 0;
+	}
+	
+	span:last-child:after{
+		right: 0;
+		border-right: 2px solid #8C8840;
+		opacity: 0;
+	}
+	
+	&:hover span:first-child:before{
+		top: -7px;
+		left: -7px;
+		opacity: 1;
+	}
+	
+	&:hover span:first-child:after{
+		top: -7px;
+		right: -7px;
+		opacity: 1;
+	}
+	
+	&:hover span:last-child:before{
+		bottom: -7px;
+		left: -7px;
+		opacity: 1;
+	}
+	
+	&:hover span:last-child:after{
+		bottom: -7px;
+		right: -7px;
+		opacity: 1;
+	}
+	
+}
+
