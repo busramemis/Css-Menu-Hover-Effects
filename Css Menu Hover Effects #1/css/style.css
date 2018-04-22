@@ -1,0 +1,41 @@
+html,
+body {
+  font-family: Lato, sans-serif;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: flex;
+}
+ul li {
+  padding: 10px 20px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #262626;
+  font-size: 1.3em;
+  position: relative;
+}
+a:before {
+  content: '';
+  width: 0;
+  height: 5px;
+  background-color: lightblue;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+li:hover a:before {
+  width: 50%;
+  -webkit-transform: translatex(100%);
+          transform: translatex(100%);
+  transition: .5s;
+}
